@@ -19,6 +19,8 @@ router.post("",uploads.single("profile"),async(req,res)=>{
         const user = await User.create({
             first_name: req.body.first_name,
              profile: req.file.path,
+            // profile:"www.google.com" + req.file.path,
+            //server name to upload the file at the server side
         
         })
 
